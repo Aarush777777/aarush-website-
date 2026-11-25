@@ -1,0 +1,352 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hi Aarush | My Digital World</title>
+
+<style>
+.popup-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-box {
+    background: linear-gradient(145deg,#17172b,#25204a);
+    border: 1px solid #927bff;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 0 40px #795dff55;
+    animation: popupShow .35s ease;
+}
+
+.popup-box h2 {
+    color: #a78bfa;
+    margin-bottom: 15px;
+}
+
+.popup-box p {
+    color: #ddd;
+    line-height: 1.7;
+}
+
+.popup-box button {
+    margin-top: 25px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background: linear-gradient(90deg,#635bff,#a855f7);
+    cursor: pointer;
+}
+
+@keyframes popupShow {
+    from {
+        opacity: 0;
+        transform: scale(.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body
+
+{
+    background: #070812;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    width: 90%;
+    margin: 22px auto;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ffffff20;
+    border-radius: 15px;
+    background: #ffffff08;
+    backdrop-filter: blur(15px);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #9b8aff;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #c4c4d4;
+    text-decoration: none;
+}
+
+nav a:hover { color: #a78bfa; }
+
+.nav-btn, .main-btn {
+    background: linear-gradient(100deg,#635bff,#a855f7);
+    padding: 13px 22px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    width: 90%;
+    max-width: 1200px;
+    min-height: 650px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    gap: 30px;
+}
+
+.tag {
+    display: inline-block;
+    color: #b7aaff;
+    border: 1px solid #8272ff55;
+    padding: 10px 16px;
+    border-radius: 30px;
+    margin-bottom: 25px;
+    font-size: 13px;
+}
+
+.hero h1 {
+    font-size: clamp(48px,6vw,78px);
+    line-height: 1.1;
+    margin-bottom: 25px;
+    letter-spacing: -3px;
+}
+
+.gradient {
+    background: linear-gradient(90deg,#8d7aff,#d28bff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero p {
+    color: #a5a6b8;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 480px;
+    margin-bottom: 30px;
+}
+
+.main-btn {
+    display: inline-block;
+    transition: .3s;
+}
+
+.main-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 25px #795dff80;
+}
+
+.art {
+    min-height: 450px;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.orb {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle at 30% 25%,
+        #d4baff,
+        #7954ed 35%,
+        #24218c 65%,
+        #08091d
+    );
+    box-shadow: 0 0 70px #7654ff80,
+                0 0 150px #5138ff40;
+    animation: float 5s ease-in-out infinite;
+}
+
+.glass {
+    position: absolute;
+    background: #15152aaf;
+    border: 1px solid #ffffff30;
+    backdrop-filter: blur(15px);
+    border-radius: 12px;
+    padding: 17px;
+    color: #dedaff;
+}
+
+.one { top: 90px; right: 0; }
+.two { bottom: 90px; left: 0; }
+
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-18px); }
+}
+
+section {
+    padding: 75px 8%;
+    text-align: center;
+}
+
+section h2 {
+    color: #a78bfa;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+section p {
+    color: #a5a6b8;
+    line-height: 1.8;
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+    color: #77798e;
+    border-top: 1px solid #ffffff15;
+}
+
+@media(max-width:750px) {
+    header {
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    nav { gap: 14px; }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 60px;
+    }
+
+    .art { min-height: 380px; }
+    .orb { width: 230px; height: 230px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">lalu yadav ki gand</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <a href="#about" class="nav-btn">Explore ↗</a>
+</header>
+
+<main>
+
+<div class="hero" id="home">
+
+    <div>
+        <div class="tag">✦ WELCOME TO MY FIRST WEBSITE</div>
+
+        <h1>
+            Hi <span class="gradient">Aarush</span> 👋
+            <br>
+            <span class="gradient">Welcome!</span>
+        </h1>
+
+        <button onclick="showWelcome()" class="main-btn">
+    Click Here 👋
+</button>
+
+<div class="popup-overlay" id="welcomePopup">
+    <div class="popup-box">
+        <h2>👋 Hello there!</h2>
+        <h3>Welcome to Aarush's Website</h3>
+        <p>I'm glad you're here. Explore my website and enjoy your visit!</p>
+
+        <button onclick="closeWelcome()">
+            Let's Explore ✨
+        </button>
+    </div>
+</div>
+<script>
+function showWelcome() {
+    document.getElementById("welcomePopup")
+        .style.display = "flex";
+}
+
+function closeWelcome() {
+    document.getElementById("welcomePopup")
+        .style.display = "none";
+}
+</script>
+
+
+    </div>
+
+    <div class="art">
+        <div class="orb"></div>
+        <div class="glass one">✦ Creative Mind</div>
+        <div class="glass two">◈ Future Vision</div>
+    </div>
+
+</div>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        Welcome to my first website hope you like my website this is a simple website built with HTML and CSS.
+    </p>
+</section>
+
+
+<section id="contact">
+    <h2>Let's Connect</h2>
+
+    <p>
+        Feel free to contact me!
+    </p>
+
+    <p style="margin-top: 25px; font-size: 18px;">
+        📧
+        <a href="mailto:aarushkhadka35@gmail.com"
+           style="color: #a78bfa; text-decoration: none;">
+            aarushkhadka35@gmail.com
+        </a>
+    </p>
+
+</section>
+
+</main>
+
+<footer>
+    © 2026 Aarush. All Rights Reserved.
+</footer>
+
+</body>
+</html>
